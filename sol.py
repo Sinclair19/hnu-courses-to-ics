@@ -1,7 +1,7 @@
 import datetime
 import json
 import ics
-data = json.load(open('data.json', 'r'))['data']
+data = json.load(open('data.json', 'r', encoding= "utf-8"))['data']
 # 在这里修改开学第一周周一的日期
 start_date = datetime.date(2020, 2, 17)
 
@@ -35,5 +35,5 @@ def create_lesson(lesson):
 
 for lesson in data:
     create_lesson(lesson)
-with open('output.ics', 'w') as f:
+with open('output.ics', 'w', encoding='UTF-8') as f:
     f.write(str(c))
