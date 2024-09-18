@@ -36,4 +36,4 @@ def create_lesson(lesson):
 for lesson in data:
     create_lesson(lesson)
 with open('output.ics', 'w', encoding='UTF-8') as f:
-    f.write(str(c))
+    f.write(c.serialize())
